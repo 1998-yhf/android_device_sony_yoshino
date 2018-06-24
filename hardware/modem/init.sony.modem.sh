@@ -17,6 +17,11 @@ chmod 0755 "${TMP_OEM_DIR}"
 ### MOUNT OEM
 mount --bind "${TMP_OEM_DIR}" "${OEM_DIR}"
 
+#
+# The carrier selection on the OEM partion in modem-config or system-properties
+# is either by the property ro.semc.version.cust.active or XXX
+#
+
 ### MOUNT MODEM-CONFIG
 mkdir "${OEM_DIR}/modem-config"
 chmod 0755 "${OEM_DIR}/modem-config"
